@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista Proiecte</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: yellow;
+    }
+    .table td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    .table th{
+      border-color: black;
+      color: yellow;
+      background-color:black;
+    }
+    .form-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .buton-cautare{
+      text-align: center;
+      margin-bottom: 30px;
+      border-radius: 83px;;
+      font-weight: bold;
+      
+    }
+
+    .nume{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .prenume{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .salariu{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .functie{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .project-id{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .data-angajarii{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .email{
+      border-radius: 83px;
+      margin-right: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    label{
+      font-weight: bold;
+    }
+
+    h1{
+      font-size: 100px;
+      background: yellow;
+    -webkit-text-fill-color: black; 
+    -webkit-background-clip: text; 
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: yellow; 
+    text-shadow: none; 
+    }
+
+    h2{
+      font-size: 50px;
+      background: yellow;
+    -webkit-text-fill-color: black; 
+    -webkit-background-clip: text; 
+    -webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: yellow; 
+    text-shadow: none; 
+    }
+
+    .Buton-angajare{
+      border-radius: 83px;
+      margin-right: 10px;
+      height: 40px;
+      font-weight: bold;
+      background-color: black;
+      color:yellow;
+      cursor:pointer;
+    }
+
+    .Buton-angajare:hover{
+      opacity: 0.8;
+      transition: 0.7s;
+    }
+
+    .Buton-angajare:active{
+      opacity: 0.5;
+    }
+    
+    body {
+    background-image: url("https://www.decoarchitects.ro/wp-content/uploads/2015/05/cladirea-raiffeisen-deco-architects-header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+    .form-container{
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Lista Proiecte</h1>
+  <div class = "buton-cautare">
+    <input type="text" id="filter-input" onkeyup="filterTable()" placeholder="Cautare">
+  </div>
+
+  <div id="table-container"></div>
+
+  <div class="form-container">
+    <h2>Adăugare Angajat Nou</h2>
+    <form id="add-employee-form">
+      
+      <input type="text" id="nume" name="nume" required, class="nume" placeholder="Nume"><br><br>
+      
+      
+      <input type="text" id="prenume" name="prenume" required, class="prenume" placeholder="Prenume"><br><br>
+      
+      
+      <input type="text" id="functie" name="functie" required, class ="functie" placeholder="Functie"><br><br>
+      
+      
+      <input type="number" id="salariu" name="salariu" required, class="salariu"  placeholder="Salariu"><br><br>
+      
+      
+      <input type="number" id="project-id" name="project-id" required, class="project-id"  placeholder="Id Proiect"><br><br>
+      
+      
+      <input type="text" id="data_angajare" name="data_angajare" required, class="data-angajarii" placeholder="Data angajarii"><br><br>
+
+      
+      <input type="text" id="email" name="email" required, class="email", placeholder="Email"><br><br>
+      
+      <button type="submit", class="Buton-angajare">Adăugare Angajat</button>
+    </form>
+  </div>
+
+  <script src="Main.js"></script>
+  <script>
+    $( "#data_angajare" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
+  </script>
+</body>
+</html>
